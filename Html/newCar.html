@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/newCar.js"></script>
+    <script src="../js/common.js"></script>
+
+    <title>New Car</title>
+</head>
+
+<body onload="getcars();" class="newCarPage">
+    <a class="btn logout" onclick="logout()">Logout</a>
+    <form class="mt-5 addNewCar registrationForm" onsubmit="addNewCar(event);">
+        <h2>Register your car</h2>
+        <div class="mb-3">
+            <label class="form-label">Model</label>
+            <input id="model" name="model" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Vehicle Number</label>
+            <input id="number" name="number" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Seating Capacity</label>
+            <input id="capacity" name="capacity" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Rent per day</label>
+            <input id="rent" name="rent" type="text" class="form-control">
+        </div>
+        <button type="submit" id="editornew" class="btn btn-primary">New Car</button>
+        <a target="_blank" href="availableCars.html" class="mt-5">ALL available cars for Rent</a>
+        <a target="_blank" href="customers.html">List of cutomers that have booked Your car</a>
+
+    </form>
+    <div class="newCarRight">
+        <h3 class="mt-5">Your registered cars:</h3>
+        <div id="carsList" class="mt-5  flex-row lists">
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</body>
+
+</html>
